@@ -1,0 +1,27 @@
+{
+  "name": "ringbuffer",
+  "version": "1.0.0",
+  "description": "A boilerplate project to quick start your typescript dojo",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine",
+    "jasmine:watch": "jasmine-node dist/spec --autotest --watch dist",
+    "compile": "tsc",
+    "compile:watch": "tsc -w",
+    "test:watch": "concurrently --kill-others \"npm run compile:watch\" \"npm run jasmine:watch\"",
+    "lint": "tslint -c tslint.json 'src/**/*.ts' 'spec/**/*.ts'",
+    "postinstall": "npm run compile"
+  },
+  "author": "alxlchnr",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^2.8.11",
+    "@types/node": "^10.12.2",
+    "concurrently": "^4.0.1",
+    "jasmine": "^3.3.0",
+    "jasmine-node": "^3.0.0",
+    "jasmine-ts-console-reporter": "^3.1.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
+  }
+}
